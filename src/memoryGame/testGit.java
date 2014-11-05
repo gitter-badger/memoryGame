@@ -8,7 +8,6 @@ public class testGit {
 		System.out.println("AMIR!");
 		System.out.println("HEY AGAIN //ANTON");
 		System.out.println("HEY AGAIN //Erik");
-		System.out.println("MARTIN KICKED FROM THIS PROJECT :D ");
 
 	}
 
