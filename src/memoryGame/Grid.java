@@ -6,16 +6,17 @@ import java.util.Collections;
 public class Grid {
 	
 	private int sizeX, sizeY; // size of grid
-	private Brick[][] gridOfBricks = new Brick[sizeX][sizeY]; //grid of bricks
+	private Brick[][] gridOfBricks; //grid of bricks
 
 	Grid(int sizeX,int sizeY) // constructor
 	{
-		this.createGrid(sizeX, sizeY); //creates grid and adds tiles to it
-	}
-	
-	public void createGrid(int sizeX, int sizeY){
+		gridOfBricks = new Brick[sizeX][sizeY];
 		this.sizeX = sizeX; //number of rows
 		this.sizeY = sizeY; //number of columns
+		this.createGrid(); //creates grid and adds tiles to it
+	}
+	
+	public void createGrid(){
 		
 		int numberOfBricks = sizeX * sizeY; //total number of bricks
 		
@@ -50,11 +51,11 @@ public class Grid {
 		for (int i = 0; i < sizeX; i++){ //outer loop start
 			for (int j = 0; j < sizeY; j++){ //inner loop start
 				
-			if (!gridOfBricks[i][j].isHide()){ // if face down
-				System.out.println("O ");
+			if (gridOfBricks[i][j].isHide()){ // if face down
+				System.out.print("O ");
 			}
-			if (!gridOfBricks[i][j].isHide()){ // if face up, get face value
-				System.out.println(gridOfBricks[i][j].getValue()+" ");
+			else if (!gridOfBricks[i][j].isHide()){ // if face up, get face value
+				System.out.print(gridOfBricks[i][j].getValue()+" ");
 			}
 				
 			} //inner loop end
