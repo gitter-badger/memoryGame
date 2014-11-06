@@ -5,7 +5,7 @@ public class Brick implements Comparable<Brick> {
 	private int x;
 	private int y;
 	private String brickValue;
-	private boolean hidden;
+	private boolean faceUp;
 
 	Brick(String value) {
 		this.brickValue = value;
@@ -16,7 +16,7 @@ public class Brick implements Comparable<Brick> {
 		this.brickValue = value;
 		this.x = x;
 		this.y = y;
-		hidden = true;
+		faceUp = false;
 
 	}
 
@@ -45,11 +45,11 @@ public class Brick implements Comparable<Brick> {
 	}
 
 	public boolean isHidden() {
-		return hidden;
+		return faceUp;
 	}
 
-	public void setHidden(boolean hidden) {
-		this.hidden = hidden;
+	public void setFaceUp(boolean hidden) {
+		this.faceUp = hidden;
 	}
 
 	@Override

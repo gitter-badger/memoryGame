@@ -28,7 +28,7 @@ public class cmdRunner {
 
 			// show tile
 			
-			grid.getBrick(coordinates[0], coordinates[1]).setHidden(false);
+			grid.getBrick(coordinates[0], coordinates[1]).setFaceUp(true);
 
 			// show grid]
 			grid.showGrid();
