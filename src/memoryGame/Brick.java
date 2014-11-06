@@ -7,6 +7,22 @@ public class Brick implements Comparable{
 	String value;
 	boolean hide;
 	
+	
+	
+	
+	Brick(String Value)
+	{
+		this.value = Value;
+		
+	}
+	Brick(int x, int y,String Value)
+	{
+		this.value = Value;
+		this.x = x;
+		this.y = y;
+		
+	}
+	
 	public int getX() {
 		return x;
 	}
