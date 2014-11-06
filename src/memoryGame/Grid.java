@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Grid {
 	
 	private int sizeX, sizeY; // size of grid
-	private Brick[][] myGridOfBriks = new Brick[sizeX][sizeY]; //grid of bricks
+	private Brick[][] gridOfBricks = new Brick[sizeX][sizeY]; //grid of bricks
 
 	Grid(int sizeX,int sizeY) // constructor
 	{
@@ -32,7 +32,7 @@ public class Grid {
 		
 		for (int i = 0; i < sizeX; i++){ // outer loop start
 			for (int j = 0; j < sizeY; j++){ //inner loop start
-			myGridOfBriks[i][j] = deckOfBricks.get(tilesAddedToGrid); //adds brick to grid
+			gridOfBricks[i][j] = deckOfBricks.get(tilesAddedToGrid); //adds brick to grid
 			tilesAddedToGrid++; 
 			} //inner loop  end
 		} //outer loop end
@@ -47,6 +47,21 @@ public class Grid {
 	
 	public void showGrid()
 	{
+	
+		for (int i = 0; i < sizeX; i++){ //outer loop start
+			for (int j = 0; j < sizeY; j++){ //inner loop start
+				
+			if (!gridOfBricks[i][j].isHide()){ // if face down
+				System.out.println("O ");
+			}
+			if (!gridOfBricks[i][j].isHide()){ // if face up, get face value
+				System.out.println(gridOfBricks[i][j].getValue()+" ");
+			}
+				
+			} //inner loop end
+			System.out.println(" "); // new line
+		} //outer loop end
+		
 		
 	}
 }
