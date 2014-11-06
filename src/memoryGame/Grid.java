@@ -39,10 +39,9 @@ public class Grid {
 		
 	} //method createGrid end
 	
-	public String getBrick(int x, int y)
+	public Brick getBrick(int x, int y)
 	{
-		return null;
-		
+		return gridOfBricks[x][y];	
 	}
 	
 	public void showGrid()
@@ -60,8 +59,7 @@ public class Grid {
 				
 			} //inner loop end
 			System.out.println(" "); // new line
-		} //outer loop end
-		
+		} //outer loop end	
 		
 	}
 }
