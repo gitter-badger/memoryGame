@@ -1,13 +1,13 @@
 package memoryGame;
 
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class cmdRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		cmdRunner cmdRunner = new cmdRunner();
 		cmdRunner.playMemo();
 
@@ -16,38 +16,41 @@ public class cmdRunner {
 	public void playMemo() {
 
 		// initiate grid
-		//Grid grid = new Grid(4, 4);
+		Grid grid = new Grid(4, 4);
 
 		// show grid
-
+		grid.showGrid();
 		// Loop 2 times[
+		for (int i = 0; i < 2; i++) {
 
-		// input from user
-		String input = inputFromUser();
+			// input from user
+			int[] coordinates = inputFromUser();
 
-		// show tile
+			// show tile
 
-		// show grid]
-
+			// show grid]
+			grid.showGrid();
+		
+		}
 	}
 
-	public String inputFromUser() {
+	public int[] inputFromUser() {
 
 		System.out.println("What tile do you want to turn?");
 
-		String coordinates;
+		int[] coordinates = null;
+		Scanner scanner = new Scanner(System.in);
+		try {
 
-		try (BufferedReader br = new BufferedReader(new InputStreamReader(
-				System.in))) {
-
-			coordinates = br.readLine();
+			System.out.print("What row: ");
+			coordinates[0] = scanner.nextInt();
+			System.out.print("What column: ");
+			coordinates[1] = scanner.nextInt();
 
 		} catch (Exception e) {
 			System.out.println("Wrong input " + e);
-			coordinates = "empty";
 			// TODO: better errorsolving if input is incorrect
 		}
-
 		return coordinates;
 	}
 }
