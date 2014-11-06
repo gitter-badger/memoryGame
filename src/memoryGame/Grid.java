@@ -51,10 +51,10 @@ public class Grid {
 		for (int i = 0; i < sizeX; i++){ //outer loop start
 			for (int j = 0; j < sizeY; j++){ //inner loop start
 				
-			if (gridOfBricks[i][j].isHide()){ // if face down
+			if (gridOfBricks[i][j].isHidden()){ // if face down
 				System.out.print("O ");
 			}
-			else if (!gridOfBricks[i][j].isHide()){ // if face up, get face value
+			else if (!gridOfBricks[i][j].isHidden()){ // if face up, get face value
 				System.out.print(gridOfBricks[i][j].getValue()+" ");
 			}
 				
