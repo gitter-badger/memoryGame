@@ -20,6 +20,7 @@ public class Brick implements Comparable{
 		this.value = Value;
 		this.x = x;
 		this.y = y;
+		hide = true;
 		
 	}
 	
