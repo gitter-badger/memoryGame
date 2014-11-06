@@ -38,14 +38,14 @@ public class cmdRunner {
 
 		System.out.println("What tile do you want to turn?");
 
-		int[] coordinates = null;
+		int[] coordinates = new int [2];
 		Scanner scanner = new Scanner(System.in);
 		try {
 
 			System.out.print("What row: ");
-			coordinates[0] = scanner.nextInt();
+			coordinates[0] = scanner.nextInt() +1;
 			System.out.print("What column: ");
-			coordinates[1] = scanner.nextInt();
+			coordinates[1] = scanner.nextInt() +1;
 
 		} catch (Exception e) {
 			System.out.println("Wrong input " + e);
