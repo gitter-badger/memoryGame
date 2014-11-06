@@ -1,32 +1,29 @@
 package memoryGame;
 
-public class Brick implements Comparable{
+public class Brick implements Comparable<Brick> {
 
-	int x;
-	int y;
-	String value;
-	boolean hide;
-	
-	
-	
-	
-	Brick(String Value)
-	{
-		this.value = Value;
+	private int x;
+	private int y;
+	private String brickValue;
+	private boolean hidden;
+
+	Brick(String value) {
+		this.brickValue = value;
 
 	}
-	Brick(int x, int y,String Value)
-	{
-		this.value = Value;
+
+	Brick(int x, int y, String value) {
+		this.brickValue = value;
 		this.x = x;
 		this.y = y;
-		hide = true;
-		
+		hidden = true;
+
 	}
-	
+
 	public int getX() {
 		return x;
 	}
+
 	public void setX(int x) {
 		this.x = x;
 	}
@@ -34,30 +31,30 @@ public class Brick implements Comparable{
 	public int getY() {
 		return y;
 	}
+
 	public void setY(int y) {
 		this.y = y;
 	}
 
 	public String getValue() {
-		return value;
+		return brickValue;
 	}
+
 	public void setValue(String value) {
-		this.value = value;
+		this.brickValue = value;
 	}
 
-	public boolean isHide() {
-		return hide;
-	}
-	public void setHide(boolean hide) {
-		this.hide = hide;
+	public boolean isHidden() {
+		return hidden;
 	}
 
-
-
-
-	
-	public int compareTo(Object o) {
-		return this.value.compareTo(((Brick) o).getValue());   
+	public void setHidden(boolean hidden) {
+		this.hidden = hidden;
 	}
-	
+
+	@Override
+	public int compareTo(Brick o) {
+		return this.brickValue.compareTo(((Brick) o).getValue());
+	}
+
 }
