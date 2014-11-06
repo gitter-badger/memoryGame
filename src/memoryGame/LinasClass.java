@@ -7,5 +7,7 @@ public class LinasClass {
 		System.out.println("lina");
 	}
 	
-	
+	public void testMethod(){
+		System.out.println("testing testing");
+	}
 }
