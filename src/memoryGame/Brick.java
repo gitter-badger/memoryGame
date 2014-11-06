@@ -13,6 +13,7 @@ public class Brick implements Comparable{
 	Brick(String Value)
 	{
 		this.value = Value;
+		System.out.print("a");
 		
 	}
 	Brick(int x, int y,String Value)
