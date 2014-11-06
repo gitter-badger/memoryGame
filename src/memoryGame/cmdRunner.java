@@ -45,9 +45,9 @@ public class cmdRunner {
 		try {
 
 			System.out.print("What row: ");
-			coordinates[0] = scanner.nextInt() +1;
+			coordinates[0] = scanner.nextInt() -1;
 			System.out.print("What column: ");
-			coordinates[1] = scanner.nextInt() +1;
+			coordinates[1] = scanner.nextInt() -1;
 
 		} catch (Exception e) {
 			System.out.println("Wrong input " + e);
