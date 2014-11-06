@@ -1,9 +1,12 @@
 package memoryGame;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author grupp2
+ *
+ */
 public class cmdRunner {
 
 	public static void main(String[] args) {
@@ -27,12 +30,12 @@ public class cmdRunner {
 			int[] coordinates = inputFromUser();
 
 			// show tile
-			
+
 			grid.getBrick(coordinates[0], coordinates[1]).setFaceUp(true);
 
 			// show grid]
 			grid.showGrid();
-		
+
 		}
 	}
 
@@ -40,19 +43,20 @@ public class cmdRunner {
 
 		System.out.println("What tile do you want to turn?");
 
-		int[] coordinates = new int [2];
+		int[] coordinates = new int[2];
 		Scanner scanner = new Scanner(System.in);
 		try {
 
 			System.out.print("What row: ");
-			coordinates[0] = scanner.nextInt() -1;
+			coordinates[0] = scanner.nextInt() - 1;
 			System.out.print("What column: ");
-			coordinates[1] = scanner.nextInt() -1;
+			coordinates[1] = scanner.nextInt() - 1;
 
 		} catch (Exception e) {
 			System.out.println("Wrong input " + e);
 			// TODO: better errorsolving if input is incorrect
 		}
+
 		return coordinates;
 	}
 }
