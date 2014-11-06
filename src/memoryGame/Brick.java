@@ -14,7 +14,7 @@ public class Brick implements Comparable{
 	{
 		this.value = Value;
 		System.out.print("a");
-		
+		System.out.print("B");
 	}
 	Brick(int x, int y,String Value)
 	{
